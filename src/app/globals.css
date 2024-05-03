@@ -1,0 +1,50 @@
+/* Establece los estilos base de Tailwind CSS */
+@tailwind base;
+/* Importa los componentes de Tailwind CSS */
+@tailwind components;
+/* Importa las utilidades de Tailwind CSS */
+@tailwind utilities;
+
+/* Definición de variables CSS personalizadas */
+:root {
+  --foreground-rgb: 0, 0, 0; /* Color del texto */
+  --background-start-rgb: 214, 219, 220; /* Color de fondo inicial */
+  --background-end-rgb: 255, 255, 255; /* Color de fondo final */
+}
+
+/* Cambia las variables en función del esquema de color preferido del usuario */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255; /* Cambia el color del texto a blanco */
+    --background-start-rgb: 0, 0, 0; /* Cambia el color de fondo inicial a negro */
+    --background-end-rgb: 0, 0, 0; /* Cambia el color de fondo final a negro */
+  }
+}
+
+/* Estilos generales del cuerpo del documento */
+body {
+  color: rgb(var(--foreground-rgb)); /* Aplica el color de texto personalizado */
+  background: rgb(var(--background-end-rgb)); /* Establece el color de fondo */
+}
+
+/* Capa de utilidades para agregar nuevas clases personalizadas */
+@layer utilities {
+  /* Define una nueva clase de utilidad para envolver el texto automáticamente */
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+html, body {
+    margin: 0;
+    width: 100%;
+    color: hsl(var(--text-primary));
+    font-family: var(--font-main);
+    background-color: hsl(var(--background));
+    -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}

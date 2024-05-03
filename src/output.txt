@@ -1,0 +1,20 @@
+Listado de rutas de carpetas para el volumen Local Disk
+El número de serie del volumen es 2AB5-5751
+C:.
+|   output.txt
+|   
++---app
+|   |   globals.css
+|   |   layout.tsx
+|   |   page.tsx
+|   |   
+|   \---dashboard
+|       |   layout.tsx
+|       |   page.tsx
+|       |   
+|       \---usuaris
+|               page.tsx
+|               
+\---ui
+        fonts.tsx
+        
